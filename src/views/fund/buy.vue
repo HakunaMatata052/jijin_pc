@@ -180,6 +180,7 @@ export default {
       font-weight: 400;
       color: rgba(84, 152, 255, 1);
       margin-left: 25px;
+      cursor: pointer;
     }
   }
   .btn {
