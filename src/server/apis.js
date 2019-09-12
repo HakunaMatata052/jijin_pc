@@ -21,7 +21,7 @@ class Api extends Axios {
     return await this.axios("POST", "stock/stock_type_list", params);
   }
   async stock_list(params = {}) {
-    return await this.axios("POST", "Stock/stock_list", params);
+    return await this.axios("POST", "Stockweb/stock_list", params);
   }
   async stock_like_up(params = {}) {
     return await this.axios("POST", "Stock/stock_like_up", params);
@@ -42,7 +42,7 @@ class Api extends Axios {
     return await this.axios("POST", "User/logout", params);
   }
   async stock_jingzhi_list(params = {}) {
-    return await this.axios("POST", "Stock/stock_jingzhi_list", params);
+    return await this.axios("POST", "Stockweb/stock_jingzhi_list", params);
   }
   async deallog(params = {}) {
     return await this.axios("POST", "Stocklog/deallog", params);

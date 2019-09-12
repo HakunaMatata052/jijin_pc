@@ -4,7 +4,10 @@ import router from "./router/router";
 import store from "./store/store";
 
 // 全局样式
+import "@/common/styles/base.css"; // 样式初始化
 import "@/common/styles/mixin.less";
+
+import "@/assets/fonts/iconfont.css"; //引入图标
 
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
