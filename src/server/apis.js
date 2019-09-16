@@ -117,6 +117,30 @@ class Api extends Axios {
     return await this.axios("POST", "User/upload", params);
   }
 
+  async stock_buy_detail(params = {}) {
+    return await this.axios("POST", "Stock/stock_buy_detail", params);
+  }
+  async buy_jingzhi(params = {}) {
+    return await this.axios("POST", "Stock/buy_jingzhi", params,{LOADINGHIDE:true});
+  }
+  async ProfitIndex(params = {}) {
+    return await this.axios("POST", "Profit/index", params);
+  }  
+  async Publiccon(params = {}) {
+    return await this.axios("POST", "Publiccon/index", params);
+  }
+  async chart_day(params = {}) {
+    return await this.axios("POST", "Profit/chart_day", params);
+  }
+  async appeal(params = {}) {
+    return await this.axios("POST", "Publiccon/appeal", params,{LOADINGHIDE:true});
+  }
+  async spread(params = {}) {
+    return await this.axios("POST", "User/spread", params,{LOADINGHIDE:true});
+  }
+  async getUserinfo(params = {}) {
+    return await this.axios("POST", "User/getUserinfo", params,{LOADINGHIDE:true});
+  }
 }
 
 

@@ -11,11 +11,11 @@ export default {
   },
   methods: {
     setVux() {
-      this.$store.state.token = this.$METHOD.getStore("token");
-      if (this.$METHOD.getStore("userInfo")) {
-        this.$store.state.userInfo = JSON.parse(
-          this.$METHOD.getStore("userInfo")
-        );
+      if (this.$METHOD.getStore("token")) {
+        this.$store.state.token = this.$METHOD.getStore("token");
+        this.$SERVER.getUserinfo().then(res=>{
+          this.$store.state.userInfo = res.data
+        });
       }
     }
   }

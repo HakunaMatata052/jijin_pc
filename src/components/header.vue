@@ -3,7 +3,7 @@
     <div class="top">
       <div class="container">
         <div class="con">
-          <span v-if="$METHOD.getStore('token')">你好，{{$store.state.userInfo.user_nickname}}</span>
+          <span v-if="$METHOD.getStore('token')" @click="$router.push('/mine')">你好，{{$store.state.userInfo.user_nickname}}</span>
           <span v-else @click="$router.push('/login')">你好，请登录</span>
           <span>免费注册</span>
           <span>基金收藏</span>
@@ -45,7 +45,7 @@
           <el-input v-model="value" placeholder="基金名称 / 代码 / 基金经理">
             <i slot="suffix" class="el-input__icon el-icon-search"></i>
           </el-input>
-          <el-button class="btn">
+          <el-button class="btn" @click="$router.push('/mine')">
             <i class="iconfont icon-yonghu"></i>
             <i slot="suffix" class="el-icon-user"></i>我的账户
             <i class="el-icon-arrow-right el-icon--right"></i>
@@ -79,7 +79,7 @@ export default {
         },
         {
           name:'我的',
-          path:'/'
+          path:'/mine'
         },
       ],
       value:""
@@ -108,6 +108,7 @@ export default {
     .con {
       float: right;
       & > span {
+        cursor: pointer;
         font-size: 14px;
         font-weight: 400;
         color: rgba(153, 153, 153, 1);

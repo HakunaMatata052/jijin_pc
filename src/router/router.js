@@ -54,6 +54,16 @@ const router = new Router({
       }
     },
     {
+      path: "/buy/buyfund/:id",
+      name: "buyfund",
+      component: () => import("@/views/fund/buyfund.vue"),
+      meta: {
+        title: "购买基金详情",
+        isMember: false,
+        isLogin: false
+      }
+    },
+    {
       path: "/buysuccess",
       name: "buysuccess",
       component: () => import("@/views/fund/buysuccess.vue"),
@@ -62,6 +72,87 @@ const router = new Router({
         isMember: false,
         isLogin: false
       }
+    },
+    {
+      path: "/mine",
+      name: "mine",      
+      redirect: '/mine/assets',
+      component: () => import("@/views/mine/index.vue"),
+      meta: {
+        title: "个人中心",
+        isMember: false,
+        isLogin: true
+      },
+      children:[{
+          path: "/mine/assets",
+          name: "assets",
+          component: () => import("@/views/mine/assets.vue"),
+          meta: {
+            title: "我的资产",
+            isMember: false,
+            isLogin: true
+          }
+        },{
+          path: "/mine/transactionRecord",
+          name: "transactionRecord",
+          component: () => import("@/views/mine/transactionRecord.vue"),
+          meta: {
+            title: "交易记录",
+            isMember: false,
+            isLogin: true
+          }
+        },
+        {
+          path: "/mine/balanceDetails",
+          name: "balanceDetails",
+          component: () => import("@/views/mine/balanceDetails.vue"),
+          meta: {
+            title: "余额明细",
+            isMember: false,
+            isLogin: true
+          }
+        },
+        {
+          path: "/mine/setPayPassword",
+          name: "setPayPassword",
+          component: () => import("@/views/mine/setPayPassword.vue"),
+          meta: {
+            title: "设置支付密码",
+            isMember: false,
+            isLogin: true
+          }
+        },
+        {
+          path: "/mine/bankup",
+          name: "bankup",
+          component: () => import("@/views/mine/bankup.vue"),
+          meta: {
+            title: "绑定银行卡",
+            isMember: false,
+            isLogin: true
+          }
+        },
+        {
+          path: "/mine/registration",
+          name: "registration",
+          component: () => import("@/views/mine/registration.vue"),
+          meta: {
+            title: "实名认证",
+            isMember: false,
+            isLogin: true
+          }
+        },
+        {
+          path: "/mine/aboutus/:type?",
+          name: "aboutus",
+          component: () => import("@/views/mine/aboutus.vue"),
+          meta: {
+            title: "关于我们",
+            isMember: false,
+            isLogin: true
+          }
+        },
+      ]
     },
   ]
 });

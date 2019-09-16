@@ -9,7 +9,8 @@ export default new Vuex.Store({
       user_id: ""
     },
     buy:{},
-    buysuccess:{}
+    buysuccess:{},
+    moneyShow: true,
   },
   mutations: {},
   actions: {}

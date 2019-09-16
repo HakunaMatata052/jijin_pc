@@ -55,7 +55,7 @@ import indexchart from "@/assets/images/indexchart.png";
 import vHeader from "@/components/header.vue";
 import vFooter from "@/components/footer.vue";
 export default {
-  name: "fund",
+  name: "buy",
   components: {
     vHeader,
     vFooter
